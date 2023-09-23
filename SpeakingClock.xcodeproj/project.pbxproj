@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046A55762ABEAC3D004EB66D /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 046A55752ABEAC3D004EB66D /* Montserrat-Light.ttf */; };
+		046A55782ABEADDB004EB66D /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 046A55772ABEADDB004EB66D /* Montserrat-Regular.ttf */; };
 		047E42FF2ABB27310054E339 /* SpeakingClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E42FE2ABB27310054E339 /* SpeakingClockApp.swift */; };
 		047E43012ABB27310054E339 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E43002ABB27310054E339 /* ContentView.swift */; };
 		047E43032ABB27330054E339 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047E43022ABB27330054E339 /* Assets.xcassets */; };
 		047E43062ABB27330054E339 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047E43052ABB27330054E339 /* Preview Assets.xcassets */; };
+		047E430D2ABB2A960054E339 /* SpeakViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E430C2ABB2A960054E339 /* SpeakViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046A55742ABEA968004EB66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		046A55752ABEAC3D004EB66D /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		046A55772ABEADDB004EB66D /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		047E42FB2ABB27310054E339 /* SpeakingClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakingClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047E42FE2ABB27310054E339 /* SpeakingClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingClockApp.swift; sourceTree = "<group>"; };
 		047E43002ABB27310054E339 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		047E43022ABB27330054E339 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047E43052ABB27330054E339 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		047E430C2ABB2A960054E339 /* SpeakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046A556F2ABEA91B004EB66D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				046A55772ABEADDB004EB66D /* Montserrat-Regular.ttf */,
+				046A55752ABEAC3D004EB66D /* Montserrat-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		047E42F22ABB27310054E339 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +67,13 @@
 		047E42FD2ABB27310054E339 /* SpeakingClock */ = {
 			isa = PBXGroup;
 			children = (
+				046A55742ABEA968004EB66D /* Info.plist */,
+				046A556F2ABEA91B004EB66D /* Fonts */,
 				047E42FE2ABB27310054E339 /* SpeakingClockApp.swift */,
 				047E43002ABB27310054E339 /* ContentView.swift */,
 				047E43022ABB27330054E339 /* Assets.xcassets */,
 				047E43042ABB27330054E339 /* Preview Content */,
+				047E430C2ABB2A960054E339 /* SpeakViewModel.swift */,
 			);
 			path = SpeakingClock;
 			sourceTree = "<group>";
@@ -125,6 +144,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046A55782ABEADDB004EB66D /* Montserrat-Regular.ttf in Resources */,
+				046A55762ABEAC3D004EB66D /* Montserrat-Light.ttf in Resources */,
 				047E43062ABB27330054E339 /* Preview Assets.xcassets in Resources */,
 				047E43032ABB27330054E339 /* Assets.xcassets in Resources */,
 			);
@@ -137,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047E430D2ABB2A960054E339 /* SpeakViewModel.swift in Sources */,
 				047E43012ABB27310054E339 /* ContentView.swift in Sources */,
 				047E42FF2ABB27310054E339 /* SpeakingClockApp.swift in Sources */,
 			);
@@ -270,11 +292,13 @@
 				DEVELOPMENT_TEAM = NKDF2V6389;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpeakingClock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cybernetics.SpeakingClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,11 +326,13 @@
 				DEVELOPMENT_TEAM = NKDF2V6389;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpeakingClock/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +340,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cybernetics.SpeakingClock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
