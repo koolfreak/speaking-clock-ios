@@ -13,7 +13,7 @@ struct ContentView: View {
        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
        let timeFormatter: DateFormatter = {
            let formatter = DateFormatter()
-           formatter.dateFormat = "hh:mm"
+           formatter.dateFormat = "h:mm"
            //formatter.dateStyle = .none
            //formatter.timeStyle = .short
            return formatter
@@ -48,8 +48,4 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+
