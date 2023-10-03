@@ -18,9 +18,11 @@ class SpeakViewModel {
         let second = calendar.component(.second, from: currentDate)
         
         if (minute % 3 == 0 && (second == 1 || second == 15 || second == 30 || second == 45))  {
-            // var _minute
-            let speechText = Utils.formatHour(currentDate: currentDate)
-            //print(speechText)
+            
+            var speechText = Utils.formatHour(currentDate: currentDate)
+            if minute == 0 {
+                speechText = "\(hour) o'clock"
+            }
             
             let utterance = AVSpeechUtterance(string: speechText)
             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")

@@ -10,10 +10,7 @@ import SwiftUI
 @main
 struct SpeakingClockApp: App {
     
-    init() {
-        // application should always on
-        UIApplication.shared.isIdleTimerDisabled = true
-    }
+    
     
     var body: some Scene {
         WindowGroup {

@@ -9,22 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var currentDate: Date = Date.now
+    
+    @State var currentTime: Date = Date.now
        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
        let timeFormatter: DateFormatter = {
            let formatter = DateFormatter()
            formatter.dateFormat = "h:mm"
-           //formatter.dateStyle = .none
-           //formatter.timeStyle = .short
            return formatter
        }()
+    private let currentDate: Date = Date.now
     private let speakViewModel: SpeakViewModel = SpeakViewModel()
+    
+    init() {
+        // application should always on
+        UIApplication.shared.isIdleTimerDisabled = true
+    }
     
     var body: some View {
         ZStack {
             VStack {
                 
-                Text("\(currentDate, formatter: timeFormatter)")
+                Text("\(currentTime, formatter: timeFormatter)")
                     .font(.custom("Montserrat-Regular", size: 250))
                     .lineSpacing(1.5)
                     .foregroundColor(.mint)
@@ -35,8 +40,8 @@ struct ContentView: View {
             
             .padding()
             .onReceive(timer) { input in
-                currentDate = input
-                speakViewModel.speakTime(currentDate: currentDate)
+                currentTime = input
+                speakViewModel.speakTime(currentDate: input)
             }
             .onAppear {
                 //speakViewModel.availLanguage()
