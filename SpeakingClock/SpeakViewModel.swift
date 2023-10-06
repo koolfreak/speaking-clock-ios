@@ -10,6 +10,8 @@ import Foundation
 
 class SpeakViewModel {
     
+    private let synthesize = AVSpeechSynthesizer()
+    
     func speakTime(currentDate: Date) {
         
         let calendar = Calendar.current
@@ -28,7 +30,7 @@ class SpeakViewModel {
             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
             utterance.rate = 0.5
             utterance.volume = 1.0
-            let synthesize = AVSpeechSynthesizer()
+            
             synthesize.speak(utterance)
         }
     }

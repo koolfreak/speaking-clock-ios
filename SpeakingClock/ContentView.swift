@@ -41,7 +41,7 @@ struct ContentView: View {
             .padding()
             .onReceive(timer) { input in
                 currentTime = input
-                speakViewModel.speakTime(currentDate: input)
+                speakViewModel.speakTime(currentDate: currentTime)
             }
             .onAppear {
                 //speakViewModel.availLanguage()
